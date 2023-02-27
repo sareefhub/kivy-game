@@ -37,3 +37,13 @@ class Game(Widget):
 			self.check.text = "You win!"
 		else:
 			self.check.text = "Draw!"
+
+
+
+class MainApp(App):
+	def build(self):
+		return Game()
+
+
+if __name__ == '__main__':
+	MainApp().run()
