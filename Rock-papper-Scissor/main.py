@@ -28,15 +28,16 @@ class Game(Widget):
 	
 	def papper(self):
 		images = ["img/rock.jpg","img/papper.png","img/scissor.jpg"]
-		self.userimage.source = "img/papper.jpg"
+		self.userimage.source = "img/papper.png"
 		self.pcimage.source = random.choice(images)
 		# Check who won
-		if self.pcimage.source == "img/scissor.png":
+		if self.pcimage.source == "img/scissor.jpg":
 			self.check.text = "You lose!"
 		elif self.pcimage.source == "img/rock.jpg":
 			self.check.text = "You win!"
 		else:
 			self.check.text = "Draw!"
+
 	def scissor(self):
 		images = ["img/rock.jpg","img/papper.png","img/scissor.jpg"]
 		self.userimage.source = "img/scissor.jpg"
@@ -49,12 +50,9 @@ class Game(Widget):
 		else:
 			self.check.text = "Draw!"
 
-
-
 class MainApp(App):
 	def build(self):
 		return Game()
-
 
 if __name__ == '__main__':
 	MainApp().run()
