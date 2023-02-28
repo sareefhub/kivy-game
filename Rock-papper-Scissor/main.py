@@ -37,6 +37,17 @@ class Game(Widget):
 			self.check.text = "You win!"
 		else:
 			self.check.text = "Draw!"
+	def scissor(self):
+		images = ["img/rock.jpg","img/papper.png","img/scissor.jpg"]
+		self.userimage.source = "img/scissor.jpg"
+		self.pcimage.source = random.choice(images)
+		# Check who won
+		if self.pcimage.source == "img/rock.jpg":
+			self.check.text = "You lose!"
+		elif self.pcimage.source == "img/papper.png":
+			self.check.text = "You win!"
+		else:
+			self.check.text = "Draw!"
 
 
 
