@@ -12,40 +12,48 @@ class Game(Widget):
 	check = ObjectProperty(None)
 	pcimage = ObjectProperty(None)
 	userimage = ObjectProperty(None)
-
 	
 	def rock(self):
-		images = ["img/rock.jpg","img/papper.png","img/scissor.jpg"]
-		self.userimage.source = "img/rock.jpg"
+		Rock = "img/rock.jpg"
+		Papper = "img/papper.png"
+		Scissor = "img/scissor.jpg"
+		images = [Rock ,Papper ,Scissor]
+		self.userimage.source = Rock
 		self.pcimage.source = random.choice(images)
 		# Check who won
-		if self.pcimage.source == "img/papper.png":
+		if self.pcimage.source == Papper:
 			self.check.text = "You lose!"
-		elif self.pcimage.source == "img/scissor.jpg":
+		elif self.pcimage.source == Scissor:
 			self.check.text = "You win!"
 		else:
 			self.check.text = "Draw!"
 	
 	def papper(self):
-		images = ["img/rock.jpg","img/papper.png","img/scissor.jpg"]
-		self.userimage.source = "img/papper.png"
+		Rock = "img/rock.jpg"
+		Papper = "img/papper.png"
+		Scissor = "img/scissor.jpg"
+		images = [Rock ,Papper ,Scissor]
+		self.userimage.source = Papper
 		self.pcimage.source = random.choice(images)
 		# Check who won
-		if self.pcimage.source == "img/scissor.jpg":
+		if self.pcimage.source == Scissor:
 			self.check.text = "You lose!"
-		elif self.pcimage.source == "img/rock.jpg":
+		elif self.pcimage.source == Rock:
 			self.check.text = "You win!"
 		else:
 			self.check.text = "Draw!"
 
 	def scissor(self):
-		images = ["img/rock.jpg","img/papper.png","img/scissor.jpg"]
-		self.userimage.source = "img/scissor.jpg"
+		Rock = "img/rock.jpg"
+		Papper = "img/papper.png"
+		Scissor = "img/scissor.jpg"
+		images = [Rock ,Papper ,Scissor]
+		self.userimage.source = Scissor
 		self.pcimage.source = random.choice(images)
 		# Check who won
-		if self.pcimage.source == "img/rock.jpg":
+		if self.pcimage.source == Rock:
 			self.check.text = "You lose!"
-		elif self.pcimage.source == "img/papper.png":
+		elif self.pcimage.source == Papper:
 			self.check.text = "You win!"
 		else:
 			self.check.text = "Draw!"
