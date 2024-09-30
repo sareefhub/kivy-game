@@ -8,5 +8,4 @@ Rock-papper-Scissor เป็นเกมเป่ายิ้งฉุบ
 6510110115 Sareef Masamaeng
 6510110219 Noppanat Chaiphundi
 6510110670 Poohnarit Rittirut
-
 ```
